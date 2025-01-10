@@ -1,0 +1,4 @@
+# vars file
+---
+msodbcsql_install:
+  - "mssql-tools{{ msodbcsql_version }}"
