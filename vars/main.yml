@@ -13,15 +13,8 @@ msodbcsql_dependencies_pre:
   - apt-transport-https
   - wget
 
-msodbcsql_debconf_selections:
-  - name: "msodbcsql{{ msodbcsql_version }}"
-    question: msodbcsql/ACCEPT_EULA
-    value: true
-    vtype: boolean
-  - name: "mssql-tools{{ msodbcsql_version }}"
-    question: mssql-tools/ACCEPT_EULA
-    value: true
-    vtype: boolean
+msodbcsql_apt_environment:
+  ACCEPT_EULA: Y
 
 msodbcsql_dependencies:
   - "msodbcsql{{ msodbcsql_version }}"
