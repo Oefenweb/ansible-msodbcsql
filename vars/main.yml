@@ -18,6 +18,10 @@ msodbcsql_debconf_selections:
     question: msodbcsql/ACCEPT_EULA
     value: true
     vtype: boolean
+  - name: "mssql-tools{{ msodbcsql_version }}"
+    question: mssql-tools/ACCEPT_EULA
+    value: true
+    vtype: boolean
 
 msodbcsql_dependencies:
   - "msodbcsql{{ msodbcsql_version }}"
