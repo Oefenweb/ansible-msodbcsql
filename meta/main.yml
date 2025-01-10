@@ -22,4 +22,8 @@ galaxy_info:
   galaxy_tags:
     - development
     - system
+    - database
+    - sql
+    - r
+    - cran
 dependencies: []

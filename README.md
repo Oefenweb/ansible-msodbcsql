@@ -1,9 +1,9 @@
 ## msodbcsql
 
 [![CI](https://github.com/Oefenweb/ansible-msodbcsql/workflows/CI/badge.svg)](https://github.com/Oefenweb/ansible-msodbcsql/actions?query=workflow%3ACI)
-[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-git--lfs-blue.svg)](https://galaxy.ansible.com/Oefenweb/msodbcsql)
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-msodbcsql-blue.svg)](https://galaxy.ansible.com/Oefenweb/msodbcsql)
 
-Set up [Microsoft ODBC](https://learn.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-ver16) in Debian-like systems.
+Set up [Microsoft ODBC](https://learn.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server) in Debian-like systems.
 
 #### Requirements
 

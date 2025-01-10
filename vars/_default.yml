@@ -1,0 +1,6 @@
+# vars file
+---
+msodbcsql_repositories:
+  - type: "deb [arch=amd64 signed-by={{ msodbcsql_keyring_dst }}]"
+    url: "https://packages.microsoft.com/{{ ansible_distribution | lower }}/{{ ansible_distribution_major_version }}/prod {{ ansible_distribution_release }}"
+    component: main
