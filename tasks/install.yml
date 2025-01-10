@@ -1,0 +1,23 @@
+# tasks file
+---
+- name: install | configure debconf
+  ansible.builtin.debconf:
+    name: "{{ item.name }}"
+    question: "{{ item.question }}"
+    value: "{{ item.value }}"
+    vtype: "{{ item.vtype }}"
+  with_items: "{{ msodbcsql_debconf_selections }}"
+
+- name: install | dependencies
+  ansible.builtin.apt:
+    name: "{{ msodbcsql_dependencies }}"
+    state: "{{ apt_install_state | default('latest') }}"
+  tags:
+    - msodbcsql-install-dependencies
+
+- name: install | additional
+  ansible.builtin.apt:
+    name: "{{ msodbcsql_install }}"
+    state: "{{ apt_install_state | default('latest') }}"
+  tags:
+    - msodbcsql-install-additional

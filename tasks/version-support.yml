@@ -1,0 +1,8 @@
+# tasks file
+---
+- name: version support | check
+  ansible.builtin.fail:
+    msg: "Microsoft ODBC version {{ msodbcsql_version }} is not supported"
+  when: msodbcsql_version | string not in msodbcsql_versions_supported
+  tags:
+    - msodbcsql-version-support-check
