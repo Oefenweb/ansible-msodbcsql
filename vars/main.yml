@@ -1,0 +1,23 @@
+# vars file
+---
+msodbcsql_versions_supported:
+  - '17'
+  - '18'
+
+msodbcsql_keyring_src: https://packages.microsoft.com/keys/microsoft.asc
+msodbcsql_keyring_dst: /usr/share/keyrings/microsoft-prod.gpg
+
+msodbcsql_dependencies_pre:
+  - software-properties-common
+  - dirmngr
+  - apt-transport-https
+  - wget
+
+msodbcsql_debconf_selections:
+  - name: "msodbcsql{{ msodbcsql_version }}"
+    question: msodbcsql/ACCEPT_EULA
+    value: true
+    vtype: boolean
+
+msodbcsql_dependencies:
+  - "msodbcsql{{ msodbcsql_version }}"

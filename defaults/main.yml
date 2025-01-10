@@ -1,0 +1,4 @@
+# defaults file
+---
+msodbcsql_version: 18
+msodbcsql_install: []
